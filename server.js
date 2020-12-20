@@ -6,14 +6,13 @@ import Cors from 'cors';
 // App config
 const app = express();
 const port = process.env.PORT || 8001
-const connection_url = 'mongodb+srv://admin:6hKIauMiw8RJGRBZ@cluster0.4nm0e.mongodb.net/tinderdbv2?retryWrites=true&w=majority' 
+const connection_url = 'mongodb+srv://admin:[passwd]@cluster0.4nm0e.mongodb.net/[database]?retryWrites=true&w=majority' 
 
 // Middlewares
 app.use(express.json());
 app.use(Cors());
 
 // DB config
-// MongoDB PW 6hKIauMiw8RJGRBZ
 mongoose.connect(connection_url, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -22,7 +21,7 @@ mongoose.connect(connection_url, {
 
 
 // API Endpoints
-app.get('/', (req, res) => res.status(200).send("Hello Clever Progammer!"));
+app.get('/', (req, res) => res.status(200).send("Hello."));
 
 app.post('/tinder/cards', (req, res) => {
     const dbCard = req.body;
@@ -49,4 +48,4 @@ app.get('/tinder/cards', (req, res) => {
 
 
 // Listener
-app.listen(port, () => console.log(`listening on localhost; ${port}`));
+app.listen(port, () => console.log(`Listening on localhost; ${port}`));
