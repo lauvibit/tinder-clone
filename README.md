@@ -1,4 +1,4 @@
-Simple Tinder-clone for practicing databases and API calls.
+Simple (MERN) Tinder-clone for practicing databases and API calls.
 
 Here a few things I used with this project:
 
@@ -6,5 +6,6 @@ Here a few things I used with this project:
 - react-tinder-card component
 - @material-ui components (icons and button click effect)
 - CORS
-- Backend hosted on Heroku
+- API calls from backend hosted on Heroku
 - Using MongoDB to pull data
+
